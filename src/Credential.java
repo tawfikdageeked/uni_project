@@ -362,7 +362,7 @@ class Account
             Name: %s
             Assigned Doctor: Dr. %s
             Reserved Room: %s
-            Hospital Fees: $%.2f
+            Hospital Fees: %.2f
             Medical History: %s
 
             """, p.id, p.name, docName, roomStatus, p.hospital_fees, p.medical_history);
@@ -432,7 +432,7 @@ class Account
         Surgery s = new Surgery(surgeryName, surgeryCost, p, p.assigned_doctor, p.reserved_room);
         DataBase.AddSurgery(s);
 
-        System.out.printf("%s reserved for %s (Surgery ID: %d, Room #%d). Updated Fees: $%.2f%n",
+        System.out.printf("%s reserved for %s (Surgery ID: %d, Room #%d). Updated Fees: %.2f%n",
             surgeryName, p.name, s.id, p.reserved_room.roomNumber, p.hospital_fees);
     }
 
